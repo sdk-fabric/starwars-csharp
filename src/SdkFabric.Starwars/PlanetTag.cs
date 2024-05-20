@@ -19,6 +19,9 @@ public class PlanetTag : TagAbstract {
     }
 
 
+    /**
+     * Get all the planets resources
+     */
     public async Task<PlanetCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
@@ -44,6 +47,9 @@ public class PlanetTag : TagAbstract {
         };
     }
 
+    /**
+     * Get a specific planets resource
+     */
     public async Task<Planet> Get(string id)
     {
         Dictionary<string, object> pathParams = new();

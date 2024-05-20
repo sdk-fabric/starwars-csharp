@@ -19,6 +19,9 @@ public class VehicleTag : TagAbstract {
     }
 
 
+    /**
+     * Get all the vehicle resources
+     */
     public async Task<VehicleCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
@@ -44,6 +47,9 @@ public class VehicleTag : TagAbstract {
         };
     }
 
+    /**
+     * Get a specific vehicle resource
+     */
     public async Task<Vehicle> Get(string id)
     {
         Dictionary<string, object> pathParams = new();

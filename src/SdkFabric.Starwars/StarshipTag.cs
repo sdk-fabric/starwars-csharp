@@ -19,6 +19,9 @@ public class StarshipTag : TagAbstract {
     }
 
 
+    /**
+     * Get all the starship resources
+     */
     public async Task<StarshipCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
@@ -44,6 +47,9 @@ public class StarshipTag : TagAbstract {
         };
     }
 
+    /**
+     * Get a specific starship resource
+     */
     public async Task<Starship> Get(string id)
     {
         Dictionary<string, object> pathParams = new();

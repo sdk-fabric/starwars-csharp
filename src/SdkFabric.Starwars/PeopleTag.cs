@@ -19,6 +19,9 @@ public class PeopleTag : TagAbstract {
     }
 
 
+    /**
+     * Get all the people resources
+     */
     public async Task<PeopleCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
@@ -44,6 +47,9 @@ public class PeopleTag : TagAbstract {
         };
     }
 
+    /**
+     * Get a specific people resource
+     */
     public async Task<People> Get(string id)
     {
         Dictionary<string, object> pathParams = new();

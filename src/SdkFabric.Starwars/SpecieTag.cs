@@ -19,6 +19,9 @@ public class SpecieTag : TagAbstract {
     }
 
 
+    /**
+     * Get all the species resources
+     */
     public async Task<SpecieCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
@@ -44,6 +47,9 @@ public class SpecieTag : TagAbstract {
         };
     }
 
+    /**
+     * Get a specific species resource
+     */
     public async Task<Specie> Get(string id)
     {
         Dictionary<string, object> pathParams = new();

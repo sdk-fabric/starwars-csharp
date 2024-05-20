@@ -19,6 +19,9 @@ public class FilmTag : TagAbstract {
     }
 
 
+    /**
+     * Get all the film resources
+     */
     public async Task<FilmCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
@@ -44,6 +47,9 @@ public class FilmTag : TagAbstract {
         };
     }
 
+    /**
+     * Get a specific film resource
+     */
     public async Task<Film> Get(string id)
     {
         Dictionary<string, object> pathParams = new();
