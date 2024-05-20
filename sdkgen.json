@@ -1,0 +1,9 @@
+{
+  "type": "client-csharp",
+  "require": {
+    "sdkfabric/starwars": {
+      "target": "./src/SdkFabric.SdkFabric.Starwars",
+      "namespace": "SdkFabric.SdkFabric.Starwars"
+    }
+  }
+}
