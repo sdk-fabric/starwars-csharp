@@ -19,12 +19,12 @@ public class PlanetTag : TagAbstract {
     }
 
 
-    public async Task<PlanetCollection> GetAll(string name)
+    public async Task<PlanetCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
 
         Dictionary<string, object> queryParams = new();
-        queryParams.Add("name", name);
+        queryParams.Add("search", search);
 
         List<string> queryStructNames = new();
 

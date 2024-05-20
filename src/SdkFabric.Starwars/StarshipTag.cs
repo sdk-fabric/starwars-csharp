@@ -19,13 +19,12 @@ public class StarshipTag : TagAbstract {
     }
 
 
-    public async Task<StarshipCollection> GetAll(string name, string model)
+    public async Task<StarshipCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
 
         Dictionary<string, object> queryParams = new();
-        queryParams.Add("name", name);
-        queryParams.Add("model", model);
+        queryParams.Add("search", search);
 
         List<string> queryStructNames = new();
 

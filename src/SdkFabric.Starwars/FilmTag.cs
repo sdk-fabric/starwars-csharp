@@ -19,12 +19,12 @@ public class FilmTag : TagAbstract {
     }
 
 
-    public async Task<FilmCollection> GetAll(string title)
+    public async Task<FilmCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
 
         Dictionary<string, object> queryParams = new();
-        queryParams.Add("title", title);
+        queryParams.Add("search", search);
 
         List<string> queryStructNames = new();
 

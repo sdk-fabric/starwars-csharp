@@ -19,12 +19,12 @@ public class SpecieTag : TagAbstract {
     }
 
 
-    public async Task<SpecieCollection> GetAll(string name)
+    public async Task<SpecieCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
 
         Dictionary<string, object> queryParams = new();
-        queryParams.Add("name", name);
+        queryParams.Add("search", search);
 
         List<string> queryStructNames = new();
 

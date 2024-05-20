@@ -19,12 +19,12 @@ public class PeopleTag : TagAbstract {
     }
 
 
-    public async Task<PeopleCollection> GetAll(string name)
+    public async Task<PeopleCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
 
         Dictionary<string, object> queryParams = new();
-        queryParams.Add("name", name);
+        queryParams.Add("search", search);
 
         List<string> queryStructNames = new();
 
