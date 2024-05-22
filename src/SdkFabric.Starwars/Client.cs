@@ -70,8 +70,8 @@ public class Client : ClientAbstract
 
 
 
-    public static Client Build(ICredentials credentials)
+    public static Client Build()
     {
-        return new Client("https://swapi.dev/api", credentials);
+        return new Client("https://swapi.dev/api", new Anonymous());
     }
 }

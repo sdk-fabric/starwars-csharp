@@ -48,7 +48,7 @@ public class SpecieTag : TagAbstract {
     }
 
     /**
-     * Get a specific specie
+     * Get a specific species
      */
     public async Task<Specie> Get(string id)
     {
