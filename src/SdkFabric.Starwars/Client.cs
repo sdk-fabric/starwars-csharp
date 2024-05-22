@@ -70,8 +70,8 @@ public class Client : ClientAbstract
 
 
 
-    public static Client Build(string clientId, string clientSecret, ITokenStore tokenStore, List<string> scopes)
+    public static Client Build(ICredentials credentials)
     {
-        return new Client("https://swapi.dev/api", new OAuth2(clientId, clientSecret, "https://api.typehub.cloud/authorization/token", "", tokenStore, scopes));
+        return new Client("https://swapi.dev/api", credentials);
     }
 }

@@ -19,12 +19,15 @@ public class PlanetTag : TagAbstract {
     }
 
 
-    public async Task<PlanetCollection> GetAll(string name)
+    /**
+     * Get all the planets
+     */
+    public async Task<PlanetCollection> GetAll(string search)
     {
         Dictionary<string, object> pathParams = new();
 
         Dictionary<string, object> queryParams = new();
-        queryParams.Add("name", name);
+        queryParams.Add("search", search);
 
         List<string> queryStructNames = new();
 
@@ -44,6 +47,9 @@ public class PlanetTag : TagAbstract {
         };
     }
 
+    /**
+     * Get a specific planet
+     */
     public async Task<Planet> Get(string id)
     {
         Dictionary<string, object> pathParams = new();
