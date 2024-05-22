@@ -20,7 +20,7 @@ public class StarshipTag : TagAbstract {
 
 
     /**
-     * Get all the starship resources
+     * Get all the starships
      */
     public async Task<StarshipCollection> GetAll(string search)
     {
@@ -48,7 +48,7 @@ public class StarshipTag : TagAbstract {
     }
 
     /**
-     * Get a specific starship resource
+     * Get a specific starship
      */
     public async Task<Starship> Get(string id)
     {

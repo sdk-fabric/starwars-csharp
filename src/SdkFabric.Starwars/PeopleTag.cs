@@ -20,7 +20,7 @@ public class PeopleTag : TagAbstract {
 
 
     /**
-     * Get all the people resources
+     * Get all the people
      */
     public async Task<PeopleCollection> GetAll(string search)
     {
@@ -48,7 +48,7 @@ public class PeopleTag : TagAbstract {
     }
 
     /**
-     * Get a specific people resource
+     * Get a specific people
      */
     public async Task<People> Get(string id)
     {

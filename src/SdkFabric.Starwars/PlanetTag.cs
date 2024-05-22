@@ -20,7 +20,7 @@ public class PlanetTag : TagAbstract {
 
 
     /**
-     * Get all the planets resources
+     * Get all the planets
      */
     public async Task<PlanetCollection> GetAll(string search)
     {
@@ -48,7 +48,7 @@ public class PlanetTag : TagAbstract {
     }
 
     /**
-     * Get a specific planets resource
+     * Get a specific planet
      */
     public async Task<Planet> Get(string id)
     {

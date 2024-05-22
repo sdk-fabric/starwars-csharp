@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace SdkFabric.Starwars;
 
 /// <summary>
-/// A People resource is an individual person or character within the Star Wars universe.
+/// A People is an individual person or character within the Star Wars universe.
 /// </summary>
 public class People
 {

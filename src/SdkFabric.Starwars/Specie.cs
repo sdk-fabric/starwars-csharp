@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace SdkFabric.Starwars;
 
 /// <summary>
-/// A Species resource is a type of person or character within the Star Wars Universe.
+/// A Species is a type of person or character within the Star Wars Universe.
 /// </summary>
 public class Specie
 {

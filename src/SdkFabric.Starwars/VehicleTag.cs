@@ -20,7 +20,7 @@ public class VehicleTag : TagAbstract {
 
 
     /**
-     * Get all the vehicle resources
+     * Get all the vehicles
      */
     public async Task<VehicleCollection> GetAll(string search)
     {
@@ -48,7 +48,7 @@ public class VehicleTag : TagAbstract {
     }
 
     /**
-     * Get a specific vehicle resource
+     * Get a specific vehicle
      */
     public async Task<Vehicle> Get(string id)
     {

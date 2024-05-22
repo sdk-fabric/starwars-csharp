@@ -20,7 +20,7 @@ public class FilmTag : TagAbstract {
 
 
     /**
-     * Get all the film resources
+     * Get all the films
      */
     public async Task<FilmCollection> GetAll(string search)
     {
@@ -48,7 +48,7 @@ public class FilmTag : TagAbstract {
     }
 
     /**
-     * Get a specific film resource
+     * Get a specific film
      */
     public async Task<Film> Get(string id)
     {

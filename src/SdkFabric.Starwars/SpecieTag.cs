@@ -20,7 +20,7 @@ public class SpecieTag : TagAbstract {
 
 
     /**
-     * Get all the species resources
+     * Get all the species
      */
     public async Task<SpecieCollection> GetAll(string search)
     {
@@ -48,7 +48,7 @@ public class SpecieTag : TagAbstract {
     }
 
     /**
-     * Get a specific species resource
+     * Get a specific specie
      */
     public async Task<Specie> Get(string id)
     {
