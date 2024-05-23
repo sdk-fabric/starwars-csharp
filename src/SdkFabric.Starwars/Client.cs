@@ -44,17 +44,17 @@ public class Client : ClientAbstract
         );
     }
 
-    public VehicleTag Vehicle()
+    public SpeciesTag Species()
     {
-        return new VehicleTag(
+        return new SpeciesTag(
             this.HttpClient,
             this.Parser
         );
     }
 
-    public SpecieTag Specie()
+    public VehicleTag Vehicle()
     {
-        return new SpecieTag(
+        return new VehicleTag(
             this.HttpClient,
             this.Parser
         );
