@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace SdkFabric.Starwars;
 
 /// <summary>
-/// A Film is a single film.
+/// A Film is a single film
 /// </summary>
 public class Film
 {

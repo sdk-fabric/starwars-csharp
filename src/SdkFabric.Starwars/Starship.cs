@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace SdkFabric.Starwars;
 
 /// <summary>
-/// A Starship is a single transport craft that has hyperdrive capability.
+/// A Starship is a single transport craft that has hyperdrive capability
 /// </summary>
 public class Starship
 {

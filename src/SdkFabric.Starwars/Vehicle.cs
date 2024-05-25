@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace SdkFabric.Starwars;
 
 /// <summary>
-/// A Vehicle is a single transport craft that does not have hyperdrive capability.
+/// A Vehicle is a single transport craft that does not have hyperdrive capability
 /// </summary>
 public class Vehicle
 {
