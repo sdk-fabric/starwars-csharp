@@ -30,13 +30,13 @@ public class Planet
     [JsonPropertyName("surface_water")]
     public string? SurfaceWater { get; set; }
     [JsonPropertyName("residents")]
-    public List<string>? Residents { get; set; }
+    public System.Collections.Generic.List<string>? Residents { get; set; }
     [JsonPropertyName("films")]
-    public List<string>? Films { get; set; }
+    public System.Collections.Generic.List<string>? Films { get; set; }
     [JsonPropertyName("url")]
     public string? Url { get; set; }
     [JsonPropertyName("created")]
-    public DateTime? Created { get; set; }
+    public System.DateTime? Created { get; set; }
     [JsonPropertyName("edited")]
-    public DateTime? Edited { get; set; }
+    public System.DateTime? Edited { get; set; }
 }

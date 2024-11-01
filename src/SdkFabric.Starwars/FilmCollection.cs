@@ -8,5 +8,5 @@ namespace SdkFabric.Starwars;
 public class FilmCollection : Collection
 {
     [JsonPropertyName("results")]
-    public List<Film>? Results { get; set; }
+    public System.Collections.Generic.List<Film>? Results { get; set; }
 }

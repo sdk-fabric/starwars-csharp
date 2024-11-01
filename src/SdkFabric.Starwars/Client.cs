@@ -70,7 +70,8 @@ public class Client : ClientAbstract
 
 
 
-    public static Client Build()
+
+    public static Client BuildAnonymous()
     {
         return new Client("https://swapi.dev/api", new Anonymous());
     }

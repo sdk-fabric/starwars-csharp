@@ -8,5 +8,5 @@ namespace SdkFabric.Starwars;
 public class StarshipCollection : Collection
 {
     [JsonPropertyName("results")]
-    public List<Starship>? Results { get; set; }
+    public System.Collections.Generic.List<Starship>? Results { get; set; }
 }
