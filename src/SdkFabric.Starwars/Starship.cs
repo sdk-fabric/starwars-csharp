@@ -38,13 +38,13 @@ public class Starship
     [JsonPropertyName("consumables")]
     public string? Consumables { get; set; }
     [JsonPropertyName("films")]
-    public List<string>? Films { get; set; }
+    public System.Collections.Generic.List<string>? Films { get; set; }
     [JsonPropertyName("pilots")]
-    public List<string>? Pilots { get; set; }
+    public System.Collections.Generic.List<string>? Pilots { get; set; }
     [JsonPropertyName("url")]
     public string? Url { get; set; }
     [JsonPropertyName("created")]
-    public DateTime? Created { get; set; }
+    public System.DateTime? Created { get; set; }
     [JsonPropertyName("edited")]
-    public DateTime? Edited { get; set; }
+    public System.DateTime? Edited { get; set; }
 }

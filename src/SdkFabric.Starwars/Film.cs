@@ -22,21 +22,21 @@ public class Film
     [JsonPropertyName("producer")]
     public string? Producer { get; set; }
     [JsonPropertyName("release_date")]
-    public DateOnly? ReleaseDate { get; set; }
+    public System.DateOnly? ReleaseDate { get; set; }
     [JsonPropertyName("species")]
-    public List<string>? Species { get; set; }
+    public System.Collections.Generic.List<string>? Species { get; set; }
     [JsonPropertyName("starships")]
-    public List<string>? Starships { get; set; }
+    public System.Collections.Generic.List<string>? Starships { get; set; }
     [JsonPropertyName("vehicles")]
-    public List<string>? Vehicles { get; set; }
+    public System.Collections.Generic.List<string>? Vehicles { get; set; }
     [JsonPropertyName("characters")]
-    public List<string>? Characters { get; set; }
+    public System.Collections.Generic.List<string>? Characters { get; set; }
     [JsonPropertyName("planets")]
-    public List<string>? Planets { get; set; }
+    public System.Collections.Generic.List<string>? Planets { get; set; }
     [JsonPropertyName("url")]
     public string? Url { get; set; }
     [JsonPropertyName("created")]
-    public DateTime? Created { get; set; }
+    public System.DateTime? Created { get; set; }
     [JsonPropertyName("edited")]
-    public DateTime? Edited { get; set; }
+    public System.DateTime? Edited { get; set; }
 }

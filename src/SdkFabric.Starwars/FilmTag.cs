@@ -34,19 +34,19 @@ public class FilmTag : TagAbstract {
         RestRequest request = new(this.Parser.Url("/films", pathParams), Method.Get);
         this.Parser.Query(request, queryParams, queryStructNames);
 
+
         RestResponse response = await this.HttpClient.ExecuteAsync(request);
 
         if (response.IsSuccessful)
         {
-            return this.Parser.Parse<FilmCollection>(response.Content);
+            var data = this.Parser.Parse<FilmCollection>(response.Content);
+
+            return data;
         }
 
-        throw (int) response.StatusCode switch
-        {
-            _ => throw new UnknownStatusCodeException("The server returned an unknown status code"),
-        };
+        var statusCode = (int) response.StatusCode;
+        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
     }
-
     /**
      * Get a specific film
      */
@@ -62,17 +62,18 @@ public class FilmTag : TagAbstract {
         RestRequest request = new(this.Parser.Url("/films/:id", pathParams), Method.Get);
         this.Parser.Query(request, queryParams, queryStructNames);
 
+
         RestResponse response = await this.HttpClient.ExecuteAsync(request);
 
         if (response.IsSuccessful)
         {
-            return this.Parser.Parse<Film>(response.Content);
+            var data = this.Parser.Parse<Film>(response.Content);
+
+            return data;
         }
 
-        throw (int) response.StatusCode switch
-        {
-            _ => throw new UnknownStatusCodeException("The server returned an unknown status code"),
-        };
+        var statusCode = (int) response.StatusCode;
+        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
     }
 
 

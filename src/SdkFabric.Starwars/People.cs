@@ -30,17 +30,17 @@ public class People
     [JsonPropertyName("homeworld")]
     public string? Homeworld { get; set; }
     [JsonPropertyName("films")]
-    public List<string>? Films { get; set; }
+    public System.Collections.Generic.List<string>? Films { get; set; }
     [JsonPropertyName("species")]
-    public List<string>? Species { get; set; }
+    public System.Collections.Generic.List<string>? Species { get; set; }
     [JsonPropertyName("starships")]
-    public List<string>? Starships { get; set; }
+    public System.Collections.Generic.List<string>? Starships { get; set; }
     [JsonPropertyName("vehicles")]
-    public List<string>? Vehicles { get; set; }
+    public System.Collections.Generic.List<string>? Vehicles { get; set; }
     [JsonPropertyName("url")]
     public string? Url { get; set; }
     [JsonPropertyName("created")]
-    public DateTime? Created { get; set; }
+    public System.DateTime? Created { get; set; }
     [JsonPropertyName("edited")]
-    public DateTime? Edited { get; set; }
+    public System.DateTime? Edited { get; set; }
 }
