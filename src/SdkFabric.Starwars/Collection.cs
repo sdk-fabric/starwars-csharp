@@ -4,13 +4,19 @@
  */
 
 using System.Text.Json.Serialization;
+
 namespace SdkFabric.Starwars;
+
 public class Collection
 {
     [JsonPropertyName("count")]
     public int? Count { get; set; }
+
     [JsonPropertyName("next")]
     public string? Next { get; set; }
+
     [JsonPropertyName("previous")]
     public string? Previous { get; set; }
+
 }
+

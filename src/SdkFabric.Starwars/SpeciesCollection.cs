@@ -4,9 +4,13 @@
  */
 
 using System.Text.Json.Serialization;
+
 namespace SdkFabric.Starwars;
+
 public class SpeciesCollection : Collection
 {
     [JsonPropertyName("results")]
     public System.Collections.Generic.List<Species>? Results { get; set; }
+
 }
+

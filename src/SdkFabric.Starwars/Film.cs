@@ -4,6 +4,7 @@
  */
 
 using System.Text.Json.Serialization;
+
 namespace SdkFabric.Starwars;
 
 /// <summary>
@@ -13,30 +14,45 @@ public class Film
 {
     [JsonPropertyName("title")]
     public string? Title { get; set; }
+
     [JsonPropertyName("episode_id")]
     public int? EpisodeId { get; set; }
+
     [JsonPropertyName("opening_crawl")]
     public string? OpeningCrawl { get; set; }
+
     [JsonPropertyName("director")]
     public string? Director { get; set; }
+
     [JsonPropertyName("producer")]
     public string? Producer { get; set; }
+
     [JsonPropertyName("release_date")]
     public System.DateOnly? ReleaseDate { get; set; }
+
     [JsonPropertyName("species")]
     public System.Collections.Generic.List<string>? Species { get; set; }
+
     [JsonPropertyName("starships")]
     public System.Collections.Generic.List<string>? Starships { get; set; }
+
     [JsonPropertyName("vehicles")]
     public System.Collections.Generic.List<string>? Vehicles { get; set; }
+
     [JsonPropertyName("characters")]
     public System.Collections.Generic.List<string>? Characters { get; set; }
+
     [JsonPropertyName("planets")]
     public System.Collections.Generic.List<string>? Planets { get; set; }
+
     [JsonPropertyName("url")]
     public string? Url { get; set; }
+
     [JsonPropertyName("created")]
     public System.DateTime? Created { get; set; }
+
     [JsonPropertyName("edited")]
     public System.DateTime? Edited { get; set; }
+
 }
+

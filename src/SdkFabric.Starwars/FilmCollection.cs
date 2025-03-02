@@ -4,9 +4,13 @@
  */
 
 using System.Text.Json.Serialization;
+
 namespace SdkFabric.Starwars;
+
 public class FilmCollection : Collection
 {
     [JsonPropertyName("results")]
     public System.Collections.Generic.List<Film>? Results { get; set; }
+
 }
+
