@@ -1,30 +1,52 @@
 
-# Starwars SDK
+# starwars-csharp
 
-This SDK is managed by the [SDK Fabric](https://sdk-fabric.org/) project.
-Our goal is to build a global infrastructure to automatically generate
-an SDK for every API, please take a look at our website for more information.
+This [SDK](https://github.com/sdk-fabric/starwars-csharp) is managed by the [SDK Fabric](https://sdk-fabric.org/) project, a global infrastructure to
+automatically generate SDKs for every API.
 
-## Contribution
-
-Please do not create a pull requests at this repository since the code is
-automatically generated. If an operation or type is missing at the client SDK
-please register at the [TypeHub](https://typehub.cloud/) platform and create
-a pull request at the [Starwars](https://app.typehub.cloud/d/sdkfabric/starwars)
-specification. The system will then automatically create a GIT commit and update
-the code.
+You can find more information about this SDK at [TypeHub](https://typehub.cloud/):
+https://app.typehub.cloud/d/sdkfabric/starwars
 
 ## Usage
-
-The following example shows how you initialize the client:
 
 ```csharp
 using SdkFabric.Starwars.Client;
 
 Client client = Client.Build("[access_token]")
 
-// @TODO use the client
-```
+// Get all the people.
+PeopleCollection response = client.People().Getall("search");
 
-You can find all available operations and types at:
-https://app.typehub.cloud/d/sdkfabric/starwars
+// Get a specific people.
+People response = client.People().Get("id");
+
+// Get all the films.
+FilmCollection response = client.Film().Getall("search");
+
+// Get a specific film.
+Film response = client.Film().Get("id");
+
+// Get all the starships.
+StarshipCollection response = client.Starship().Getall("search");
+
+// Get a specific starship.
+Starship response = client.Starship().Get("id");
+
+// Get all the species.
+SpeciesCollection response = client.Species().Getall("search");
+
+// Get a specific species.
+Species response = client.Species().Get("id");
+
+// Get all the vehicles.
+VehicleCollection response = client.Vehicle().Getall("search");
+
+// Get a specific vehicle.
+Vehicle response = client.Vehicle().Get("id");
+
+// Get all the planets.
+PlanetCollection response = client.Planet().Getall("search");
+
+// Get a specific planet.
+Planet response = client.Planet().Get("id");
+```
