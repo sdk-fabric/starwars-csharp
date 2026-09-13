@@ -15,38 +15,38 @@ using SdkFabric.Starwars.Client;
 Client client = Client.Build("[access_token]")
 
 // Get all the people.
-PeopleCollection response = client.People().Getall("search");
+People_Collection response = client.People().getAll("search");
 
 // Get a specific people.
-People response = client.People().Get("id");
+People response = client.People().get("id");
 
 // Get all the films.
-FilmCollection response = client.Film().Getall("search");
+Film_Collection response = client.Film().getAll("search");
 
 // Get a specific film.
-Film response = client.Film().Get("id");
+Film response = client.Film().get("id");
 
 // Get all the starships.
-StarshipCollection response = client.Starship().Getall("search");
+Starship_Collection response = client.Starship().getAll("search");
 
 // Get a specific starship.
-Starship response = client.Starship().Get("id");
+Starship response = client.Starship().get("id");
 
 // Get all the species.
-SpeciesCollection response = client.Species().Getall("search");
+Species_Collection response = client.Species().getAll("search");
 
 // Get a specific species.
-Species response = client.Species().Get("id");
+Species response = client.Species().get("id");
 
 // Get all the vehicles.
-VehicleCollection response = client.Vehicle().Getall("search");
+Vehicle_Collection response = client.Vehicle().getAll("search");
 
 // Get a specific vehicle.
-Vehicle response = client.Vehicle().Get("id");
+Vehicle response = client.Vehicle().get("id");
 
 // Get all the planets.
-PlanetCollection response = client.Planet().Getall("search");
+Planet_Collection response = client.Planet().getAll("search");
 
 // Get a specific planet.
-Planet response = client.Planet().Get("id");
+Planet response = client.Planet().get("id");
 ```
