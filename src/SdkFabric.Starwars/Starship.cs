@@ -12,36 +12,6 @@ namespace SdkFabric.Starwars;
 /// </summary>
 public class Starship
 {
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    [JsonPropertyName("model")]
-    public string? Model { get; set; }
-
-    [JsonPropertyName("starship_class")]
-    public string? StarshipClass { get; set; }
-
-    [JsonPropertyName("manufacturer")]
-    public string? Manufacturer { get; set; }
-
-    [JsonPropertyName("cost_in_credits")]
-    public string? CostInCredits { get; set; }
-
-    [JsonPropertyName("length")]
-    public string? Length { get; set; }
-
-    [JsonPropertyName("crew")]
-    public string? Crew { get; set; }
-
-    [JsonPropertyName("passengers")]
-    public string? Passengers { get; set; }
-
-    [JsonPropertyName("max_atmosphering_speed")]
-    public string? MaxAtmospheringSpeed { get; set; }
-
-    [JsonPropertyName("hyperdrive_rating")]
-    public string? HyperdriveRating { get; set; }
-
     [JsonPropertyName("MGLT")]
     public string? MGLT { get; set; }
 
@@ -51,20 +21,50 @@ public class Starship
     [JsonPropertyName("consumables")]
     public string? Consumables { get; set; }
 
-    [JsonPropertyName("films")]
-    public System.Collections.Generic.List<string>? Films { get; set; }
-
-    [JsonPropertyName("pilots")]
-    public System.Collections.Generic.List<string>? Pilots { get; set; }
-
-    [JsonPropertyName("url")]
-    public string? Url { get; set; }
+    [JsonPropertyName("cost_in_credits")]
+    public string? CostInCredits { get; set; }
 
     [JsonPropertyName("created")]
     public System.DateTime? Created { get; set; }
 
+    [JsonPropertyName("crew")]
+    public string? Crew { get; set; }
+
     [JsonPropertyName("edited")]
     public System.DateTime? Edited { get; set; }
+
+    [JsonPropertyName("films")]
+    public System.Collections.Generic.List<string>? Films { get; set; }
+
+    [JsonPropertyName("hyperdrive_rating")]
+    public string? HyperdriveRating { get; set; }
+
+    [JsonPropertyName("length")]
+    public string? Length { get; set; }
+
+    [JsonPropertyName("manufacturer")]
+    public string? Manufacturer { get; set; }
+
+    [JsonPropertyName("max_atmosphering_speed")]
+    public string? MaxAtmospheringSpeed { get; set; }
+
+    [JsonPropertyName("model")]
+    public string? Model { get; set; }
+
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    [JsonPropertyName("passengers")]
+    public string? Passengers { get; set; }
+
+    [JsonPropertyName("pilots")]
+    public System.Collections.Generic.List<string>? Pilots { get; set; }
+
+    [JsonPropertyName("starship_class")]
+    public string? StarshipClass { get; set; }
+
+    [JsonPropertyName("url")]
+    public string? Url { get; set; }
 
 }
 

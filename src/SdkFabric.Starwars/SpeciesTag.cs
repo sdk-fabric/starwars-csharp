@@ -20,34 +20,6 @@ public class SpeciesTag : TagAbstract {
 
 
     /**
-     * Get all the species
-     */
-    public async Task<SpeciesCollection> GetAll(string search)
-    {
-        Dictionary<string, object> pathParams = new();
-
-        Dictionary<string, object> queryParams = new();
-        queryParams.Add("search", search);
-
-        List<string> queryStructNames = new();
-
-        RestRequest request = new(this.Parser.Url("/species", pathParams), Method.Get);
-        this.Parser.Query(request, queryParams, queryStructNames);
-
-
-        RestResponse response = await this.HttpClient.ExecuteAsync(request);
-
-        if (response.IsSuccessful)
-        {
-            var data = this.Parser.Parse<SpeciesCollection>(response.Content);
-
-            return data;
-        }
-
-        var statusCode = (int) response.StatusCode;
-        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
-    }
-    /**
      * Get a specific species
      */
     public async Task<Species> Get(string id)
@@ -68,6 +40,34 @@ public class SpeciesTag : TagAbstract {
         if (response.IsSuccessful)
         {
             var data = this.Parser.Parse<Species>(response.Content);
+
+            return data;
+        }
+
+        var statusCode = (int) response.StatusCode;
+        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
+    }
+    /**
+     * Get all the species
+     */
+    public async Task<SpeciesCollection> GetAll(string search)
+    {
+        Dictionary<string, object> pathParams = new();
+
+        Dictionary<string, object> queryParams = new();
+        queryParams.Add("search", search);
+
+        List<string> queryStructNames = new();
+
+        RestRequest request = new(this.Parser.Url("/species", pathParams), Method.Get);
+        this.Parser.Query(request, queryParams, queryStructNames);
+
+
+        RestResponse response = await this.HttpClient.ExecuteAsync(request);
+
+        if (response.IsSuccessful)
+        {
+            var data = this.Parser.Parse<SpeciesCollection>(response.Content);
 
             return data;
         }

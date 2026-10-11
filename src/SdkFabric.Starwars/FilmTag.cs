@@ -20,34 +20,6 @@ public class FilmTag : TagAbstract {
 
 
     /**
-     * Get all the films
-     */
-    public async Task<FilmCollection> GetAll(string search)
-    {
-        Dictionary<string, object> pathParams = new();
-
-        Dictionary<string, object> queryParams = new();
-        queryParams.Add("search", search);
-
-        List<string> queryStructNames = new();
-
-        RestRequest request = new(this.Parser.Url("/films", pathParams), Method.Get);
-        this.Parser.Query(request, queryParams, queryStructNames);
-
-
-        RestResponse response = await this.HttpClient.ExecuteAsync(request);
-
-        if (response.IsSuccessful)
-        {
-            var data = this.Parser.Parse<FilmCollection>(response.Content);
-
-            return data;
-        }
-
-        var statusCode = (int) response.StatusCode;
-        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
-    }
-    /**
      * Get a specific film
      */
     public async Task<Film> Get(string id)
@@ -68,6 +40,34 @@ public class FilmTag : TagAbstract {
         if (response.IsSuccessful)
         {
             var data = this.Parser.Parse<Film>(response.Content);
+
+            return data;
+        }
+
+        var statusCode = (int) response.StatusCode;
+        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
+    }
+    /**
+     * Get all the films
+     */
+    public async Task<FilmCollection> GetAll(string search)
+    {
+        Dictionary<string, object> pathParams = new();
+
+        Dictionary<string, object> queryParams = new();
+        queryParams.Add("search", search);
+
+        List<string> queryStructNames = new();
+
+        RestRequest request = new(this.Parser.Url("/films", pathParams), Method.Get);
+        this.Parser.Query(request, queryParams, queryStructNames);
+
+
+        RestResponse response = await this.HttpClient.ExecuteAsync(request);
+
+        if (response.IsSuccessful)
+        {
+            var data = this.Parser.Parse<FilmCollection>(response.Content);
 
             return data;
         }

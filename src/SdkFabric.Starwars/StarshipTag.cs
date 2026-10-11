@@ -20,34 +20,6 @@ public class StarshipTag : TagAbstract {
 
 
     /**
-     * Get all the starships
-     */
-    public async Task<StarshipCollection> GetAll(string search)
-    {
-        Dictionary<string, object> pathParams = new();
-
-        Dictionary<string, object> queryParams = new();
-        queryParams.Add("search", search);
-
-        List<string> queryStructNames = new();
-
-        RestRequest request = new(this.Parser.Url("/starships", pathParams), Method.Get);
-        this.Parser.Query(request, queryParams, queryStructNames);
-
-
-        RestResponse response = await this.HttpClient.ExecuteAsync(request);
-
-        if (response.IsSuccessful)
-        {
-            var data = this.Parser.Parse<StarshipCollection>(response.Content);
-
-            return data;
-        }
-
-        var statusCode = (int) response.StatusCode;
-        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
-    }
-    /**
      * Get a specific starship
      */
     public async Task<Starship> Get(string id)
@@ -68,6 +40,34 @@ public class StarshipTag : TagAbstract {
         if (response.IsSuccessful)
         {
             var data = this.Parser.Parse<Starship>(response.Content);
+
+            return data;
+        }
+
+        var statusCode = (int) response.StatusCode;
+        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
+    }
+    /**
+     * Get all the starships
+     */
+    public async Task<StarshipCollection> GetAll(string search)
+    {
+        Dictionary<string, object> pathParams = new();
+
+        Dictionary<string, object> queryParams = new();
+        queryParams.Add("search", search);
+
+        List<string> queryStructNames = new();
+
+        RestRequest request = new(this.Parser.Url("/starships", pathParams), Method.Get);
+        this.Parser.Query(request, queryParams, queryStructNames);
+
+
+        RestResponse response = await this.HttpClient.ExecuteAsync(request);
+
+        if (response.IsSuccessful)
+        {
+            var data = this.Parser.Parse<StarshipCollection>(response.Content);
 
             return data;
         }

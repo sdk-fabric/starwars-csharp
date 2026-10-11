@@ -12,8 +12,17 @@ namespace SdkFabric.Starwars;
 /// </summary>
 public class Film
 {
-    [JsonPropertyName("title")]
-    public string? Title { get; set; }
+    [JsonPropertyName("characters")]
+    public System.Collections.Generic.List<string>? Characters { get; set; }
+
+    [JsonPropertyName("created")]
+    public System.DateTime? Created { get; set; }
+
+    [JsonPropertyName("director")]
+    public string? Director { get; set; }
+
+    [JsonPropertyName("edited")]
+    public System.DateTime? Edited { get; set; }
 
     [JsonPropertyName("episode_id")]
     public int? EpisodeId { get; set; }
@@ -21,8 +30,8 @@ public class Film
     [JsonPropertyName("opening_crawl")]
     public string? OpeningCrawl { get; set; }
 
-    [JsonPropertyName("director")]
-    public string? Director { get; set; }
+    [JsonPropertyName("planets")]
+    public System.Collections.Generic.List<string>? Planets { get; set; }
 
     [JsonPropertyName("producer")]
     public string? Producer { get; set; }
@@ -36,23 +45,14 @@ public class Film
     [JsonPropertyName("starships")]
     public System.Collections.Generic.List<string>? Starships { get; set; }
 
-    [JsonPropertyName("vehicles")]
-    public System.Collections.Generic.List<string>? Vehicles { get; set; }
-
-    [JsonPropertyName("characters")]
-    public System.Collections.Generic.List<string>? Characters { get; set; }
-
-    [JsonPropertyName("planets")]
-    public System.Collections.Generic.List<string>? Planets { get; set; }
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 
-    [JsonPropertyName("created")]
-    public System.DateTime? Created { get; set; }
-
-    [JsonPropertyName("edited")]
-    public System.DateTime? Edited { get; set; }
+    [JsonPropertyName("vehicles")]
+    public System.Collections.Generic.List<string>? Vehicles { get; set; }
 
 }
 

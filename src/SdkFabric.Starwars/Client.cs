@@ -20,14 +20,6 @@ public class Client : ClientAbstract
     {
     }
 
-    public PeopleTag People()
-    {
-        return new PeopleTag(
-            this.HttpClient,
-            this.Parser
-        );
-    }
-
     public FilmTag Film()
     {
         return new FilmTag(
@@ -36,9 +28,17 @@ public class Client : ClientAbstract
         );
     }
 
-    public StarshipTag Starship()
+    public PeopleTag People()
     {
-        return new StarshipTag(
+        return new PeopleTag(
+            this.HttpClient,
+            this.Parser
+        );
+    }
+
+    public PlanetTag Planet()
+    {
+        return new PlanetTag(
             this.HttpClient,
             this.Parser
         );
@@ -52,17 +52,17 @@ public class Client : ClientAbstract
         );
     }
 
-    public VehicleTag Vehicle()
+    public StarshipTag Starship()
     {
-        return new VehicleTag(
+        return new StarshipTag(
             this.HttpClient,
             this.Parser
         );
     }
 
-    public PlanetTag Planet()
+    public VehicleTag Vehicle()
     {
-        return new PlanetTag(
+        return new VehicleTag(
             this.HttpClient,
             this.Parser
         );

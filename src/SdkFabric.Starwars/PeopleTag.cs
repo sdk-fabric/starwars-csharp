@@ -20,6 +20,34 @@ public class PeopleTag : TagAbstract {
 
 
     /**
+     * Get a specific person
+     */
+    public async Task<People> Get(string id)
+    {
+        Dictionary<string, object> pathParams = new();
+        pathParams.Add("id", id);
+
+        Dictionary<string, object> queryParams = new();
+
+        List<string> queryStructNames = new();
+
+        RestRequest request = new(this.Parser.Url("/people/:id", pathParams), Method.Get);
+        this.Parser.Query(request, queryParams, queryStructNames);
+
+
+        RestResponse response = await this.HttpClient.ExecuteAsync(request);
+
+        if (response.IsSuccessful)
+        {
+            var data = this.Parser.Parse<People>(response.Content);
+
+            return data;
+        }
+
+        var statusCode = (int) response.StatusCode;
+        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
+    }
+    /**
      * Get all the people
      */
     public async Task<PeopleCollection> GetAll(string search)
@@ -40,34 +68,6 @@ public class PeopleTag : TagAbstract {
         if (response.IsSuccessful)
         {
             var data = this.Parser.Parse<PeopleCollection>(response.Content);
-
-            return data;
-        }
-
-        var statusCode = (int) response.StatusCode;
-        throw new UnknownStatusCodeException("The server returned an unknown status code: " + statusCode);
-    }
-    /**
-     * Get a specific people
-     */
-    public async Task<People> Get(string id)
-    {
-        Dictionary<string, object> pathParams = new();
-        pathParams.Add("id", id);
-
-        Dictionary<string, object> queryParams = new();
-
-        List<string> queryStructNames = new();
-
-        RestRequest request = new(this.Parser.Url("/people/:id", pathParams), Method.Get);
-        this.Parser.Query(request, queryParams, queryStructNames);
-
-
-        RestResponse response = await this.HttpClient.ExecuteAsync(request);
-
-        if (response.IsSuccessful)
-        {
-            var data = this.Parser.Parse<People>(response.Content);
 
             return data;
         }
